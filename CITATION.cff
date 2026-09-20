@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+title: "handle-correlation: evidence-ranked same-actor scoring for observed handles"
+message: "If you use this software or the method it implements, please cite it."
+type: software
+authors:
+  - family-names: Karumudi
+    # Add your ORCID before release; it makes the work
+    # machine-linkable to you across citation systems.
+    # orcid: "https://orcid.org/0000-0000-0000-0000"
+    given-names: Tushar
+repository-code: "https://github.com/tusharkarumudi/handle-correlation"
+abstract: >-
+  A scoring model for deciding whether observed usernames and handles belong to
+  the same actor. Recovers handle roots under leetspeak, separator, affix and
+  homoglyph mutation; derives evidence weight from measured handle selectivity
+  rather than match count; and places all same-root evidence in one correlation
+  group so that reuse across N platforms counts as one observation of one naming
+  habit rather than N independent confirmations. Performs no enumeration:
+  input is observations the analyst has already collected.
+keywords:
+  - username correlation
+  - sockpuppet detection
+  - threat actor attribution
+  - open source intelligence
+  - entity resolution
+license: Apache-2.0
+version: 2.0.0
