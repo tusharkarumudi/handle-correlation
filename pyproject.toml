@@ -1,0 +1,58 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "handle-correlation"
+version = "2.0.1"
+description = "Evidence-strength scoring for observed usernames and handles"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+authors = [{ name = "Tushar Karumudi" }]
+keywords = ["osint", "threat-intelligence", "entity-resolution", "attribution",
+            "username", "sockpuppet", "actor-attribution"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Information Technology",
+  "Topic :: Security",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+]
+dependencies = ["attribution-graph>=2.0.1,<2.1"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.6"]
+
+[project.scripts]
+handlecorr = "handle_correlation.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/tusharkarumudi/handle-correlation"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/handle_correlation"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.pytest.ini_options]
+# Explicit taxonomy. A developer should not need implicit environmental
+# knowledge to make `pytest` green: network and browser tests fail on a
+# machine without DNS or Chromium, and that is an environment fact rather
+# than a defect.
+#
+#   pytest                      # deterministic subset, the release gate
+#   pytest -m network           # needs outbound DNS/HTTP
+#   pytest -m browser           # needs a headless browser
+testpaths = ["tests"]
+markers = [
+    "network: requires outbound network access",
+    "browser: requires a headless browser (playwright/chromium)",
+    "integration: spans more than one package",
+    "adversarial: injection, obfuscation and SSRF regressions",
+    "slow: takes more than a second",
+]
+addopts = "-m 'not network and not browser'"

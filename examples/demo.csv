@@ -1,0 +1,6 @@
+handle,platform,first_seen,last_seen,source_url,link_email,link_pgp,case_ref
+kr4ken,github,2019-03-01,2024-11-02,https://example/1,,ABCD1234ABCD1234ABCD1234ABCD1234ABCD1234,DEMO
+kraken_x,telegram,2021-06-14,2026-01-20,https://example/2,kraken@example.test,ABCD1234ABCD1234ABCD1234ABCD1234ABCD1234,DEMO
+xXkrakenXx,x,2020-01-05,2025-08-11,https://example/3,,,DEMO
+admin,forum,2020-01-01,2026-01-01,https://example/4,,,DEMO
+phoenixfire,gitlab,2018-02-02,2023-04-04,https://example/5,,,DEMO
