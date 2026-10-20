@@ -12,6 +12,10 @@
 
 ## [Unreleased]
 
+## [2.0.2] - 2026-09-27
+
+- README points first-time readers at the suite.
+
 ## [2.0.1] - 2026-09-21
 
 - Documentation, examples and test fixtures now use only placeholder data.

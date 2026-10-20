@@ -4,6 +4,17 @@
 [![PyPI](https://img.shields.io/pypi/v/handle-correlation.svg)](https://pypi.org/project/handle-correlation/)
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 
+> **New here? Start with the suite.** One install, one command:
+>
+> ```bash
+> pip install attribution-suite
+> attribution-suite --domain example.com
+> ```
+>
+> It runs this package for you and prints who is paid for a site. Run
+> `attribution doctor` first if anything looks wrong. This README covers the
+> package itself, for people wiring it into something of their own.
+
 Decides which observed usernames belong to the same actor, with a probability
 you can defend.
 
