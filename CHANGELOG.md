@@ -12,6 +12,16 @@
 
 ## [Unreleased]
 
+## [2.0.3] - 2026-10-20
+
+- Test fixtures and examples no longer carry the names or domains of real
+  third parties; fictional equivalents preserve the handle structure each
+  test is about.
+- Install instructions use a virtualenv, and name the PEP 668 refusal
+  (`error: externally-managed-environment`) that stops a system-wide
+  `pip install` on Ubuntu, Debian, Fedora and Homebrew Python. The README's
+  own first line was a command that cannot work on a current Ubuntu.
+
 ## [2.0.2] - 2026-09-27
 
 - README points first-time readers at the suite.

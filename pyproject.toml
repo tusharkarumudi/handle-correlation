@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "handle-correlation"
-version = "2.0.2"
+version = "2.0.3"
 description = "Evidence-strength scoring for observed usernames and handles"
 readme = "README.md"
 requires-python = ">=3.11"

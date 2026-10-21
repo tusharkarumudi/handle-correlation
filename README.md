@@ -7,7 +7,7 @@
 > **New here? Start with the suite.** One install, one command:
 >
 > ```bash
-> pip install attribution-suite
+> pipx install attribution-suite        # pipx, not pip — see Install below
 > attribution-suite --domain example.com
 > ```
 >
@@ -21,8 +21,19 @@ you can defend.
 **Scores handles. Does not discover them.** Input is observations you already
 collected.
 
+Install into a virtualenv — this is a library, imported by your own code:
+
 ```bash
+python3 -m venv .venv && . .venv/bin/activate
 pip install handle-correlation
+```
+
+A system-wide `pip install` is refused on Ubuntu, Debian, Fedora and Homebrew
+Python with `error: externally-managed-environment` (PEP 668). That is the OS
+protecting its own Python, not a fault in this package. Do not pass
+`--break-system-packages`.
+
+```bash
 handlecorr score --observations case.csv --corpus usernames.txt
 ```
 
